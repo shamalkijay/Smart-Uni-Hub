@@ -1,8 +1,11 @@
 function Events() {
   return (
     <div className="container mt-5">
-      <h2>Event Planning Module</h2>
-      <p>View and organize university events and activities.</p>
+      <div className="p-5 text-center bg-light rounded-4 shadow-sm border-0" style={{ background: "linear-gradient(135deg, #ffffff 0%, #f9f9f9 100%)" }}>
+        <h1 className="display-4 fw-bold text-dark mb-3">Campus Events</h1>
+        <p className="lead text-muted mb-4">Discover what's happening at the university this week.</p>
+        <button className="btn btn-primary btn-lg rounded-pill px-4" disabled>Coming Soon</button>
+      </div>
     </div>
   );
 }

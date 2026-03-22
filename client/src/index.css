@@ -1,0 +1,101 @@
+/* GLOBAL EDUCATION & PROFESSIONAL THEME */
+:root {
+  --color-primary: #1e3a8a; /* Deep Educational Navy */
+  --color-primary-light: #3b82f6; 
+  --color-secondary: #0ea5e9; /* Cyan / Tech Blue */
+  --color-accent: #f59e0b; /* Amber */
+  --color-success: #10b981; /* Emerald */
+  --color-danger: #ef4444; /* Rose */
+  --color-background: #f8fafc;
+  --color-surface: #ffffff;
+  --color-text-main: #1e293b;
+  --color-text-muted: #64748b;
+  --font-display: 'Outfit', sans-serif;
+  --font-body: 'Inter', sans-serif;
+  --shadow-sm: 0 1px 3px rgba(0,0,0,0.05), 0 1px 2px rgba(0,0,0,0.1);
+  --shadow-md: 0 4px 6px -1px rgba(0,0,0,0.05), 0 2px 4px -1px rgba(0,0,0,0.03);
+  --shadow-hover: 0 10px 15px -3px rgba(0, 0, 0, 0.08), 0 4px 6px -2px rgba(0, 0, 0, 0.04);
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--color-background);
+  color: var(--color-text-main);
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4, h5, h6, .navbar-brand, .app-title {
+  font-family: var(--font-display);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+/* Buttons */
+.btn {
+  font-family: var(--font-body);
+  font-weight: 600;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  border-radius: 8px; /* Slightly industrial but modern */
+}
+
+.btn-primary {
+  background-color: var(--color-primary-light);
+  border-color: var(--color-primary-light);
+  box-shadow: var(--shadow-sm);
+}
+
+.btn-primary:hover {
+  background-color: var(--color-primary);
+  border-color: var(--color-primary);
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-md);
+}
+
+/* Cards */
+.card {
+  background: var(--color-surface);
+  border: 1px solid rgba(0,0,0,0.05) !important;
+  border-radius: 12px;
+  box-shadow: var(--shadow-md) !important;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  box-shadow: var(--shadow-hover) !important;
+}
+
+/* Forms */
+.form-control, .form-select {
+  border-radius: 8px !important;
+  border: 1px solid rgba(0,0,0,0.1) !important;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  font-size: 0.95rem;
+}
+
+.form-control:focus, .form-select:focus {
+  border-color: var(--color-primary-light) !important;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.2) !important;
+}
+
+/* Navigation Overrides */
+.navbar {
+  background-color: var(--color-primary) !important; 
+  box-shadow: var(--shadow-md);
+}
+
+.navbar .nav-link {
+  font-weight: 500;
+  font-size: 0.95rem;
+  transition: opacity 0.2s ease;
+}
+
+.navbar .nav-link:hover {
+  opacity: 0.8;
+}
+
+/* Universal badge styling */
+.badge {
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  padding: 0.4em 0.6em;
+}

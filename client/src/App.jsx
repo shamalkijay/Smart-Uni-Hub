@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Home from "./pages/Home";
 import Login from "./pages/Login";
@@ -11,10 +11,14 @@ import Transport from "./pages/Transport";
 import Events from "./pages/Events";
 import Payments from "./pages/Payments";
 
-function App() {
+function AppContent() {
+  const location = useLocation();
+  // Hide Navbar strictly on the Home page
+  const showNav = location.pathname !== "/";
+
   return (
-    <BrowserRouter>
-      <Navbar />
+    <>
+      {showNav && <Navbar />}
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/login" element={<Login />} />
@@ -27,6 +31,14 @@ function App() {
         <Route path="/events" element={<Events />} />
         <Route path="/payments" element={<Payments />} />
       </Routes>
+    </>
+  );
+}
+
+function App() {
+  return (
+    <BrowserRouter>
+      <AppContent />
     </BrowserRouter>
   );
 }
